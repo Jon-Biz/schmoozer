@@ -11,23 +11,26 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="styles/main.css">
-        <!-- build:js scripts/vendor/modernizr.js -->
+        <!-- build:js scripts/lib.js -->
+        <script src="components/jquery/jquery.js"></script>
+        <script src="components/underscore/underscore.js"></script>
+        <script src="components/backbone/backbone.js"></script>
         <script src="components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
     <body>
         <div class="container">
-            <div class="hero-unit">
-                <h1>'Allo, 'Allo!</h1>
-                <p>You now have</p>
-                <ul>
-                    <li>HTML5 Boilerplate</li>
-                    <li>Twitter Bootstrap</li>
-                    <li>RequireJS</li>
-                </ul>
-                <p>installed.</p>
-                <h3>Enjoy coding! - Yeoman</h3>
-            </div>
+            <form class="form" action="/contact" method="post">
+                <div class="fieldset">
+                    <label>Who are you?</label>
+                    <input type="text" name="name">
+                </div>
+                <div class="fieldset">
+                    <label>Email?</label>
+                    <input type="email" name="email">
+                </div>
+                <button type="submit" name="submit">Submit</button>
+            </form>
         </div>
 
         <!--[if lt IE 7]>
